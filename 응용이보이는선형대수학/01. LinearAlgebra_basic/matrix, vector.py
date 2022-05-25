@@ -15,6 +15,6 @@ V = np.array([[1],
 A.shape
 
 # 행렬 벡터 연산
-print(A+V)
-print(A-V)
-print(A*V)
+A+V
+A-V
+A*V
