@@ -9,23 +9,19 @@ import matplotlib.pyplot as plt
 import numpy as np
 import random
 
-
 # 스칼라 배를 통해 서로를 만들 수 없는 두 벡터
 v1 = np.array([1, 2])
 v2 = np.array([1, 3])
 
-
 # 임의의 스칼라 배
 x1 = [random.uniform(-1, 1) for i in range(10000)]
 x2 = [random.uniform(-1, 1) for i in range(10000)]
-
 
 # 그래프 형태
 plt.figure(figsize=(10, 10))
 plt.xlim(-0.5, 0.5)
 plt.ylim(-0.5, 0.5)
 plt.grid(linestyle="--")
-
 
 # 좌표평면에 벡터 표시
 # plt.arrow(0, 0, v1[0], v1[1], head_width=.5, head_length=.5, color="red")
@@ -40,7 +36,4 @@ for i, j in zip(x1, x2):
     v1 = [1, 2]
     v2 = [1, 3]
 
-
 plt.show()
-
-
