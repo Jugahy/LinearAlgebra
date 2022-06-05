@@ -19,8 +19,8 @@ A.T
 np.diag([1, 2, 3])
 
 # 블록행렬 생성
-D11 = np.array([[1,2],[3,4]])
-D12 = np.array([[5],[6]])
+D11 = np.array([[1, 2], [3, 4]])
+D12 = np.array([[5], [6]])
 D21 = np.array([[7, 7]])
 D22 = np.array([[8]])
 
