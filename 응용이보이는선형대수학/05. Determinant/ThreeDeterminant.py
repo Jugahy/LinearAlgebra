@@ -1,7 +1,8 @@
 import numpy as np
+import TwoDeterminant
 
 
-# 직접
+# 직접 원하는 행, 열 삭제
 def getMinorMatrix(A, i, j):
     n = len(A)
     M = np.zeros((n - 1, n - 1))
@@ -13,21 +14,13 @@ def getMinorMatrix(A, i, j):
     return M
 
 
-# numpy module 사용
+# numpy module 사용 원하는 행, 열 삭제
 def getMinorMatrix2(A, i, j):
     a = np.delete(A, i, axis=0)
     a = np.delete(a, j, axis=1)
     return a
 
 
-# 2*2 행렬의 행렬식
-def det(A):
-    return A[0][0] * A[1][1] - A[0][1] * A[1][0]
-
-
-A = np.array([[1, 2, 3],
-              [3, 2, 1],
-              [4, 4, 5]])
-
 # 첫번째 행을 기준으로 determinant를 계산 해보겠습니다.
-A[0][0] * det(getMinorMatrix2(A, 0, 0)) - A[0][1] * det(getMinorMatrix2(A, 0, 1)) + A[0][2] * det(getMinorMatrix2(A, 0, 2))
+def one_row_determinant(A):
+    A[0][0] * TwoDeterminant.det(getMinorMatrix2(A, 0, 0)) - A[0][1] * TwoDeterminant.det(getMinorMatrix2(A, 0, 1)) + A[0][2] * TwoDeterminant.det(getMinorMatrix2(A, 0, 2))
