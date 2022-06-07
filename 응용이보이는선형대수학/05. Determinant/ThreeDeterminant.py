@@ -1,6 +1,7 @@
 import numpy as np
 import TwoDeterminant
 
+
 # 직접 원하는 행, 열 삭제
 def getMinorMatrix(A, i, j):
     n = len(A)

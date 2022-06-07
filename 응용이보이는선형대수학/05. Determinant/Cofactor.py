@@ -1,8 +1,9 @@
 import TwoDeterminant
 
 
-def MinorDeterminant(A):
+def cofactor(A):
     import numpy as np
+    import math
 
     (n, m) = A.shape
 
@@ -12,6 +13,6 @@ def MinorDeterminant(A):
         for j in range(m):
             a = np.delete(A, i, axis=0)
             a = np.delete(a, j, axis=1)
-            B[i][j] = TwoDeterminant.det(a)
-
+            print(i, j)
+            B[i][j] = math.pow(-1, i + j) * TwoDeterminant.det(a)
     return B
