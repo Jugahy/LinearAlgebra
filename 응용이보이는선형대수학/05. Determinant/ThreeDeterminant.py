@@ -21,6 +21,6 @@ def getMinorMatrix2(A, i, j):
     return a
 
 
-# 첫번째 행을 기준으로 determinant를 계산 해보겠습니다.
+# 첫번째 행을 기준으로 determinant를 계산
 def one_row_determinant(A):
     A[0][0] * TwoDeterminant.det(getMinorMatrix2(A, 0, 0)) - A[0][1] * TwoDeterminant.det(getMinorMatrix2(A, 0, 1)) + A[0][2] * TwoDeterminant.det(getMinorMatrix2(A, 0, 2))

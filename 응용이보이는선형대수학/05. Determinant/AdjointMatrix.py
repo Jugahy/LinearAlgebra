@@ -13,6 +13,5 @@ def AdjointMatrix(A):
         for j in range(m):
             a = np.delete(A, i, axis=0)
             a = np.delete(a, j, axis=1)
-            print(i, j)
             B[i][j] = math.pow(-1, i + j) * TwoDeterminant.det(a)
     return B.T
