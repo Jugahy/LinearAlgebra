@@ -1,6 +1,5 @@
 import TwoDeterminant
 
-
 def MinorDeterminant(A):
     import numpy as np
 
